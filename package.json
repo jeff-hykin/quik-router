@@ -1,13 +1,13 @@
 {
   "license": "MIT",
-  "name": "good-router",
+  "name": "quik-router",
   "description": "Everything is detailed in the `documentation/setup.md`!",
   "version": "1.0.0",
   "main": "main/main.js",
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jeff-hykin/good-router.git"
+    "url": "git+https://github.com/jeff-hykin/quik-router.git"
   },
   "keywords": [
     "router",
@@ -19,9 +19,9 @@
   ],
   "author": "Jeff Hykin",
   "bugs": {
-    "url": "https://github.com/jeff-hykin/good-router/issues"
+    "url": "https://github.com/jeff-hykin/quik-router/issues"
   },
-  "homepage": "https://github.com/jeff-hykin/good-router#readme",
+  "homepage": "https://github.com/jeff-hykin/quik-router#readme",
   "dependencies": {
     "@vue-reactivity/watch": "^0.1.6",
     "@vue/reactivity": "^3.2.19",

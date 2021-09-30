@@ -4,10 +4,10 @@ Its the easiest tool for handling routing
 
 # How do I use it?
 
-`npm install good-router`
+`npm install quik-router`
 
 ```js
-const router = require("good-router")
+const router = require("quik-router")
 //     router.pageInfo
 //     router.goTo({})
 //     router.goBack()
