@@ -1,0 +1,33 @@
+lockfileVersion: 5.3
+
+specifiers:
+  '@vue-reactivity/watch': ^0.1.6
+  '@vue/reactivity': ^3.2.19
+  '@vue/shared': ^3.2.19
+
+dependencies:
+  '@vue-reactivity/watch': 0.1.6_e12bd40890938bd287f438db6ddcccb5
+  '@vue/reactivity': 3.2.19
+  '@vue/shared': 3.2.19
+
+packages:
+
+  /@vue-reactivity/watch/0.1.6_e12bd40890938bd287f438db6ddcccb5:
+    resolution: {integrity: sha512-Se4D+1LAnn8B49MuRzWyZv2syb+9FTuxXKA8FF6gjZD08PdVwoVZG3ncZzqFFG2lVlzx03+rjOCtIJb+VkD3Qg==}
+    peerDependencies:
+      '@vue/reactivity': '>=3.0.0-rc.1'
+      '@vue/shared': '>=3.0.0-rc.1'
+    dependencies:
+      '@vue/reactivity': 3.2.19
+      '@vue/shared': 3.2.19
+    dev: false
+
+  /@vue/reactivity/3.2.19:
+    resolution: {integrity: sha512-FtachoYs2SnyrWup5UikP54xDX6ZJ1s5VgHcJp4rkGoutU3Ry61jhs+nCX7J64zjX992Mh9gGUC0LqTs8q9vCA==}
+    dependencies:
+      '@vue/shared': 3.2.19
+    dev: false
+
+  /@vue/shared/3.2.19:
+    resolution: {integrity: sha512-Knqhx7WieLdVgwCAZgTVrDCXZ50uItuecLh9JdLC8O+a5ayaSyIQYveUK3hCRNC7ws5zalHmZwfdLMGaS8r4Ew==}
+    dev: false
