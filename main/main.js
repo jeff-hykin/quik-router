@@ -67,7 +67,7 @@ const { get } = require("lodash")
     function onPageInfoChange() {
         // run all the callbacks since the object changed
         for (const each of pageInfoChangeListeners) {
-            each()
+            each(pageInfo)
         }
         // check for specific changes
         if (pageInfoStringified !== previousPageInfoStringified) {
