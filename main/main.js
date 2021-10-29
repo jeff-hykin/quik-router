@@ -121,7 +121,7 @@ const { get } = require("lodash")
     // 
     watch(pageInfo, ()=>{
         if (!quietlySetPageInfo.ignoreChangesToPageInfo) {
-            pageInfoStringified = JSON.stringify(pageInfoStringified)
+            pageInfoStringified = JSON.stringify(pageInfo)
             updateUrl()
             onPageInfoChange()
         } else {
