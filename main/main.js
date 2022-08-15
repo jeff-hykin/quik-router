@@ -47,7 +47,7 @@ const { get } = require("lodash")
     
     // if data changes, update the URL
     function updateUrl() {
-        const urlWithParameters = addParameters(window.location.origin)
+        const urlWithParameters = addParameters(module.exports.config.urlBase)
         // change the url in the top bar to include the new path and parameters
         window.history.replaceState(JSON.parse(pageInfoStringified), '', urlWithParameters)
     }
@@ -148,11 +148,14 @@ const { get } = require("lodash")
 // 
 // 
 module.exports = {
+    config: {
+        urlBase: window.location.origin,
+    },
     goTo(object) {
         // first update the pageInfo 
         quietlySetPageInfo(object)
         // then generate the new url
-        const urlWithParameters = addParameters(window.location.origin)
+        const urlWithParameters = addParameters(module.exports.config.urlBase)
         // push the change onto history
         window.history.pushState(JSON.parse(JSON.stringify(pageInfo)), '', urlWithParameters)
         // tell things that the value changed
