@@ -4,11 +4,13 @@ specifiers:
   '@vue-reactivity/watch': ^0.1.6
   '@vue/reactivity': ^3.2.19
   '@vue/shared': ^3.2.19
+  lodash: ^4.17.21
 
 dependencies:
   '@vue-reactivity/watch': 0.1.6_e12bd40890938bd287f438db6ddcccb5
   '@vue/reactivity': 3.2.19
   '@vue/shared': 3.2.19
+  lodash: 4.17.21
 
 packages:
 
@@ -30,4 +32,8 @@ packages:
 
   /@vue/shared/3.2.19:
     resolution: {integrity: sha512-Knqhx7WieLdVgwCAZgTVrDCXZ50uItuecLh9JdLC8O+a5ayaSyIQYveUK3hCRNC7ws5zalHmZwfdLMGaS8r4Ew==}
+    dev: false
+
+  /lodash/4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
     dev: false
