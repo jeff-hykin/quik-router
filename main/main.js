@@ -3,6 +3,10 @@ const { watch } = require("@vue-reactivity/watch")
 const { get } = require("lodash")
 
 // TODO: eventually replace some of the JSON stringifies with a fast+stable JSON stringify (ordered keys)
+    const getParameters = function(url) {
+        pageInfoStringified = `${new URL(url).searchParams.get("_")}` || '{}'
+        return JSON.parse(pageInfoStringified)
+    }
 
 // 
 // intial page data
@@ -18,11 +22,6 @@ const { get } = require("lodash")
 // 
 // helpers
 // 
-    const getParameters = function(url) {
-        pageInfoStringified = `${new URL(url).searchParams.get("_")}` || '{}'
-        return JSON.parse(pageInfoStringified)
-    }
-    
     const addParameters = function(url=window.location.href) {
         // append the parameters
         const urlObject = new URL(url)
