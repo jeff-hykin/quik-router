@@ -1,17 +1,15 @@
-const { reactive } = require("@vue/reactivity")
-const { watch } = require("@vue-reactivity/watch")
-const { get } = require("lodash")
+import { reactive, watch, get } from "./deps.bundle.js"
 
 // TODO: eventually replace some of the JSON stringifies with a fast+stable JSON stringify (ordered keys)
+    let pageInfoStringified = null
     const getParameters = function(url) {
         pageInfoStringified = `${new URL(url).searchParams.get("_")}` || '{}'
-        return JSON.parse(pageInfoStringified)
+        return JSON.parse(pageInfoStringified)||{}
     }
 
 // 
 // intial page data
 // 
-    let pageInfoStringified = null
     const pageInfo = reactive(getParameters(window.location.href))
     let previousPageInfoStringified = pageInfoStringified
     quietlySetPageInfo.ignoreChangesToPageInfo = false
@@ -46,7 +44,7 @@ const { get } = require("lodash")
     
     // if data changes, update the URL
     function updateUrl() {
-        const urlWithParameters = addParameters(module.exports.config.urlBase)
+        const urlWithParameters = addParameters(router.config.urlBase)
         // change the url in the top bar to include the new path and parameters
         window.history.replaceState(JSON.parse(pageInfoStringified), '', urlWithParameters)
     }
@@ -146,7 +144,7 @@ const { get } = require("lodash")
 // export
 // 
 // 
-module.exports = {
+const router = {
     config: {
         urlBase: window.location.origin,
     },
@@ -154,7 +152,7 @@ module.exports = {
         // first update the pageInfo 
         quietlySetPageInfo(object)
         // then generate the new url
-        const urlWithParameters = addParameters(module.exports.config.urlBase)
+        const urlWithParameters = addParameters(router.config.urlBase)
         // push the change onto history
         window.history.pushState(JSON.parse(JSON.stringify(pageInfo)), '', urlWithParameters)
         // tell things that the value changed
@@ -195,3 +193,5 @@ module.exports = {
         }
     },
 }
+
+export default router
