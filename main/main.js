@@ -146,7 +146,9 @@ import { reactive, watch, get } from "./deps.bundle.js"
 // 
 const router = {
     config: {
-        urlBase: window.location.origin,
+        get urlBase() {
+            return window.location.href.split(/(\?|#)/g)[0]
+        }
     },
     goTo(object) {
         // first update the pageInfo 

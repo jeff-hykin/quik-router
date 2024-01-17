@@ -3919,9 +3919,9 @@ function updateUrl() {
   const urlWithParameters = addParameters(router.config.urlBase);
   window.history.replaceState(JSON.parse(pageInfoStringified), "", urlWithParameters);
 }
-function onGo() {
+function onGo({ trigger }) {
   for (const each of goListeners) {
-    each(pageInfo);
+    each(pageInfo, trigger);
   }
 }
 function onPageInfoChange() {
@@ -3931,7 +3931,7 @@ function onPageInfoChange() {
   if (pageInfoStringified !== previousPageInfoStringified) {
     const previousValue = JSON.parse(previousPageInfoStringified);
     previousPageInfoStringified = pageInfoStringified;
-    const knownChanges = Map();
+    const knownChanges = /* @__PURE__ */ new Map();
     for (const [keyList, callback] of specificChangeListeners) {
       let prevValue;
       let newValue;
@@ -3968,18 +3968,21 @@ Kd(pageInfo, () => {
 window.addEventListener("popstate", ({ state }) => {
   quietlySetPageInfo(state);
   onPageInfoChange();
-  onGo();
+  onGo({ trigger: "popstate" });
 });
 var router = {
   config: {
-    urlBase: window.location.origin
+    get urlBase() {
+      return window.location.href.split(/(\?|#)/g)[0];
+    }
   },
   goTo(object) {
     quietlySetPageInfo(object);
     const urlWithParameters = addParameters(router.config.urlBase);
-    window.history.pushState(JSON.parse(JSON.stringify(pageInfo)), "", urlWithParameters);
+    const args = [JSON.parse(JSON.stringify(pageInfo)), "", urlWithParameters];
+    window.history.pushState(...args);
     onPageInfoChange();
-    onGo();
+    onGo({ trigger: "goTo" });
   },
   goSecretlyTo(object) {
     quietlySetPageInfo(object);
