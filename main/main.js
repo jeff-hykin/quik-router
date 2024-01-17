@@ -54,10 +54,10 @@ import { reactive, watch, get } from "./deps.bundle.js"
 // callback managers
 // 
 // 
-    function onGo() {
+    function onGo({trigger}) {
         // run the callback
         for (const each of goListeners) {
-            each(pageInfo)
+            each(pageInfo, trigger)
         }
     }
 
@@ -73,7 +73,7 @@ import { reactive, watch, get } from "./deps.bundle.js"
             // update "previous" for next time
             previousPageInfoStringified = pageInfoStringified
             // create a cache
-            const knownChanges = Map()
+            const knownChanges = new Map()
             // call specific listeners if specific values changed
             for (const [keyList, callback] of specificChangeListeners) {
                 let prevValue
@@ -135,7 +135,7 @@ import { reactive, watch, get } from "./deps.bundle.js"
         // manually trigger info change callbacks
         onPageInfoChange()
         // run all the callbacks to let them know something changed
-        onGo()
+        onGo({trigger:'popstate'})
     })
 
 
@@ -153,12 +153,13 @@ const router = {
         quietlySetPageInfo(object)
         // then generate the new url
         const urlWithParameters = addParameters(router.config.urlBase)
+        const args = [JSON.parse(JSON.stringify(pageInfo)), "", urlWithParameters]
         // push the change onto history
-        window.history.pushState(JSON.parse(JSON.stringify(pageInfo)), '', urlWithParameters)
+        window.history.pushState(...args)
         // tell things that the value changed
         onPageInfoChange()
         // run all the go callbacks
-        onGo()
+        onGo({trigger:'goTo'})
     },
     goSecretlyTo(object) {
         // quitely is to save processing power if there are a lot of keys/values
