@@ -1,5 +1,6 @@
 import { reactive, watch, get } from "./deps.bundle.js"
 
+globalThis.window = globalThis.window || globalThis
 // TODO: eventually replace some of the JSON stringifies with a fast+stable JSON stringify (ordered keys)
     let pageInfoStringified = null
     const getParameters = function(url) {
