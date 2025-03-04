@@ -1,6 +1,8 @@
 {
   "version": "4",
   "remote": {
+    "https://raw.githubusercontent.com/jeff-hykin/quik-router/78dd0cdcb9a835ba6228cdb011627988bb8997b2/main/deps.bundle.js": "c728083348c4f3b82f39f5a2c45c15588b5e8c977b11d3455ebe6c2a247fbc46",
+    "https://raw.githubusercontent.com/jeff-hykin/quik-router/78dd0cdcb9a835ba6228cdb011627988bb8997b2/main/main.js": "9f735b8d4015e079e31ae948db635017699f802c52bfb204fee5c47b3118e1f5",
     "https://raw.githubusercontent.com/jeff-hykin/quik-router/aebcafb462630379d8c67970ffdf7cff9d7e787a/main/deps.bundle.js": "b9f6b8dfe1ed8cbb767985422adc5bf76c0494711c3a108b33cc3ca87fce905e",
     "https://raw.githubusercontent.com/jeff-hykin/quik-router/aebcafb462630379d8c67970ffdf7cff9d7e787a/main/main.js": "9f735b8d4015e079e31ae948db635017699f802c52bfb204fee5c47b3118e1f5"
   },
