@@ -4,7 +4,9 @@
     "https://raw.githubusercontent.com/jeff-hykin/quik-router/78dd0cdcb9a835ba6228cdb011627988bb8997b2/main/deps.bundle.js": "c728083348c4f3b82f39f5a2c45c15588b5e8c977b11d3455ebe6c2a247fbc46",
     "https://raw.githubusercontent.com/jeff-hykin/quik-router/78dd0cdcb9a835ba6228cdb011627988bb8997b2/main/main.js": "9f735b8d4015e079e31ae948db635017699f802c52bfb204fee5c47b3118e1f5",
     "https://raw.githubusercontent.com/jeff-hykin/quik-router/aebcafb462630379d8c67970ffdf7cff9d7e787a/main/deps.bundle.js": "b9f6b8dfe1ed8cbb767985422adc5bf76c0494711c3a108b33cc3ca87fce905e",
-    "https://raw.githubusercontent.com/jeff-hykin/quik-router/aebcafb462630379d8c67970ffdf7cff9d7e787a/main/main.js": "9f735b8d4015e079e31ae948db635017699f802c52bfb204fee5c47b3118e1f5"
+    "https://raw.githubusercontent.com/jeff-hykin/quik-router/aebcafb462630379d8c67970ffdf7cff9d7e787a/main/main.js": "9f735b8d4015e079e31ae948db635017699f802c52bfb204fee5c47b3118e1f5",
+    "https://raw.githubusercontent.com/jeff-hykin/quik-router/ef1bd84eceaeabfd45528afd198d9f23fd6d34a4/main/deps.bundle.js": "8a27e32a9e6e0b266e17d99a1f4d57d91cc6e27c269382a41b331fbba06657aa",
+    "https://raw.githubusercontent.com/jeff-hykin/quik-router/ef1bd84eceaeabfd45528afd198d9f23fd6d34a4/main/main.js": "9f735b8d4015e079e31ae948db635017699f802c52bfb204fee5c47b3118e1f5"
   },
   "workspace": {
     "packageJson": {

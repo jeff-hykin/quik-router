@@ -1,20 +1,21 @@
 {
     if (globalThis.document) {
         const g = document.createElement("link").relList
-        if (g && g.supports && g.supports("modulepreload")) return
-        for (const A of document.querySelectorAll('link[rel="modulepreload"]')) x(A)
-        new MutationObserver((A) => {
-            for (const R of A) if (R.type === "childList") for (const m of R.addedNodes) m.tagName === "LINK" && m.rel === "modulepreload" && x(m)
-        }).observe(document, { childList: !0, subtree: !0 })
-        function u(A) {
-            const R = {}
-            return A.integrity && (R.integrity = A.integrity), A.referrerPolicy && (R.referrerPolicy = A.referrerPolicy), A.crossOrigin === "use-credentials" ? (R.credentials = "include") : A.crossOrigin === "anonymous" ? (R.credentials = "omit") : (R.credentials = "same-origin"), R
-        }
-        function x(A) {
-            if (A.ep) return
-            A.ep = !0
-            const R = u(A)
-            fetch(A.href, R)
+        if (!(g && g.supports && g.supports("modulepreload"))) {
+            for (const A of document.querySelectorAll('link[rel="modulepreload"]')) x(A)
+            new MutationObserver((A) => {
+                for (const R of A) if (R.type === "childList") for (const m of R.addedNodes) m.tagName === "LINK" && m.rel === "modulepreload" && x(m)
+            }).observe(document, { childList: !0, subtree: !0 })
+            function u(A) {
+                const R = {}
+                return A.integrity && (R.integrity = A.integrity), A.referrerPolicy && (R.referrerPolicy = A.referrerPolicy), A.crossOrigin === "use-credentials" ? (R.credentials = "include") : A.crossOrigin === "anonymous" ? (R.credentials = "omit") : (R.credentials = "same-origin"), R
+            }
+            function x(A) {
+                if (A.ep) return
+                A.ep = !0
+                const R = u(A)
+                fetch(A.href, R)
+            }
         }
     }
 }
