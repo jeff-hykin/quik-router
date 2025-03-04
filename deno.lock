@@ -1,12 +1,21 @@
 {
   "version": "4",
   "remote": {
+    "https://esm.sh/gh/jeff-hykin/quik-router/main/main.js": "14b1d1ab6d7088d2c47c24027ed9860070b9b5c9ad87b25ec3716289d73a95c5",
+    "https://esm.sh/gh/jeff-hykin/quik-router@b693960/denonext/quik-router.development.mjs": "4ec250f186cffc99716b31d2afb80c81fdf12e1cc8f8c41370de1d6fb8c327f3",
+    "https://esm.sh/gh/jeff-hykin/quik-router@b693960/denonext/quik-router.mjs": "c359dde69e395e5bdbd31b5a4ca1c2875da896cba92dd376086d551fdf72347c",
+    "https://esm.sh/gh/jeff-hykin/quik-router@b693960/main/main.js": "689fd941a1cc11aeea6965720b48679185d753885836729e7e004c88bc76fc20",
+    "https://esm.sh/gh/jeff-hykin/quik-router@b693960/main/main.js?dev": "567e674551bc13748de957e4b2f75f8aff6d1e964cd066f1e344a9ea8dda3bea",
+    "https://esm.sh/gh/jeff-hykin/quik-router@b693960c52dfa713065fff658fccc6a8e2433be2/denonext/quik-router.mjs": "bd75d66e1488ac5c00172bba9e490689ea059f3a18fd41aa0b99d3a7181f8b2c",
+    "https://esm.sh/gh/jeff-hykin/quik-router@b693960c52dfa713065fff658fccc6a8e2433be2/main/main.js": "1e7aeacb907148579e828e7b87093af92577c47900289399d431f93a197352b6",
     "https://raw.githubusercontent.com/jeff-hykin/quik-router/32d396b765c6c0cbff6eec61eea5f64f1d94cf13/main/deps.bundle.js": "5c39e59abc6c3aa5ecc559656f63eb8cbac8ae82fbb4eab4ed0033f85c64c686",
     "https://raw.githubusercontent.com/jeff-hykin/quik-router/32d396b765c6c0cbff6eec61eea5f64f1d94cf13/main/main.js": "9f735b8d4015e079e31ae948db635017699f802c52bfb204fee5c47b3118e1f5",
     "https://raw.githubusercontent.com/jeff-hykin/quik-router/78dd0cdcb9a835ba6228cdb011627988bb8997b2/main/deps.bundle.js": "c728083348c4f3b82f39f5a2c45c15588b5e8c977b11d3455ebe6c2a247fbc46",
     "https://raw.githubusercontent.com/jeff-hykin/quik-router/78dd0cdcb9a835ba6228cdb011627988bb8997b2/main/main.js": "9f735b8d4015e079e31ae948db635017699f802c52bfb204fee5c47b3118e1f5",
     "https://raw.githubusercontent.com/jeff-hykin/quik-router/aebcafb462630379d8c67970ffdf7cff9d7e787a/main/deps.bundle.js": "b9f6b8dfe1ed8cbb767985422adc5bf76c0494711c3a108b33cc3ca87fce905e",
     "https://raw.githubusercontent.com/jeff-hykin/quik-router/aebcafb462630379d8c67970ffdf7cff9d7e787a/main/main.js": "9f735b8d4015e079e31ae948db635017699f802c52bfb204fee5c47b3118e1f5",
+    "https://raw.githubusercontent.com/jeff-hykin/quik-router/b693960c52dfa713065fff658fccc6a8e2433be2/main/deps.bundle.js": "5c39e59abc6c3aa5ecc559656f63eb8cbac8ae82fbb4eab4ed0033f85c64c686",
+    "https://raw.githubusercontent.com/jeff-hykin/quik-router/b693960c52dfa713065fff658fccc6a8e2433be2/main/main.js": "cddef67d19f762a095a54833a7f4b1f5f34e49a07e78c27a14dbf95649423cab",
     "https://raw.githubusercontent.com/jeff-hykin/quik-router/ef1bd84eceaeabfd45528afd198d9f23fd6d34a4/main/deps.bundle.js": "8a27e32a9e6e0b266e17d99a1f4d57d91cc6e27c269382a41b331fbba06657aa",
     "https://raw.githubusercontent.com/jeff-hykin/quik-router/ef1bd84eceaeabfd45528afd198d9f23fd6d34a4/main/main.js": "9f735b8d4015e079e31ae948db635017699f802c52bfb204fee5c47b3118e1f5"
   },
