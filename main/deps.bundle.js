@@ -1,3 +1,4 @@
+globalThis.document = globalThis.document || {}
 ;(function () {
     const g = document.createElement("link").relList
     if (g && g.supports && g.supports("modulepreload")) return
